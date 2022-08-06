@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    line-height: 18px;
+    letter-spacing: 3px;
+    word-spacing: 0px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 50px;
+    color:rgb(223, 130, 143);
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+}
+
+.primerParrafo {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+body{
+    background-color: rgb(252, 217, 240);
+}
+
+
+.banner {        
+    
+    height: 70%;
+    position: sticky;   
+    width:100%;
+    top:0px;
+    
+    background-color:rgb(143, 173, 229);
+}
+
+
+
+
+header {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px;   
+    width: 100%;
+    position: sticky;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal; 
+    background-color:rgb(223, 130, 143);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15%;
+}
+
+.navbar__boton {
+    color: rgb(255, 255, 255);
+}
+
+.contenedorImagenes {
+    display: flex;
+    flex-direction: row;
+ 
+}
+
+h3 {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background-color: rgb(223, 130, 143);
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+.footer {
+    color: aliceblue;
+    background-color: rgb(223, 130, 143);
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__link{
+    color: aliceblue;
+    
+    
+    
+}
+
+.contenedorBusqueda {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.buscador {
+    width: 30%;
+    border-style: outset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(143, 173, 229);
+    
+}
+
+
+.buscador__provincia {
+    flex-direction: row;
+    
+}
+
+.boton{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.formulario {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+    
+}
+
+.formularioCampos {
+    width: 50%;
+    border-style: outset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(143, 173, 229);
+    
+}
+
+ /*Hola Gabi, acá no puedo hacer que el contenedor
+ se centre. Estoy haciendo lo mismo que hice por
+ ejemplo con el de locales, pero no me sale.*/
+
+.formulario__contenido{
+    display: flex;
+    
+}
+
+.fotoLipstick {
+    margin-left: 500px
+}
+
+.contenedorVideo {
+    width: 100%;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.tutorial {
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+.productos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    margin-bottom: 5%;
+   justify-content: center;
+    
+}
+
+.fotoProducto {
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.labelProducto {
+    
+    text-align: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+/****/
+
+
+
+.grilla {
+    display: grid;
+    grid-template-areas: 
+    "banner banner banner banner"
+    "primeraImagen primerParrafo"
+    "segundaImagen primerParrafo"
+    "contenedorVideo contendedorVideo"
+    "footer footer footer footer";
+    grid-template-columns: 1fr;
+    /*grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr; 
+    Hola Gabi acá te dejo comentado lo que hice inciialmente pero no funciona. El header lo agranda un montón y no se por qué. No considera filas a los elementos que pongo en cada una y tuve que poner una sola columna cuando a mi entender son dos porque no quedaba bien*/
+    grid-template-rows: auto;
+}
+
+/*Gabi acá aplique grilla a las imagenes y texto y pude. Pero no puedo con todo el body*/
+
+.grid {
+    display: grid;
+    grid-template-areas: 
+    "primerContenedor primerTexto"
+    "segundoContenedor segundoTexto";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 200px 200px;
+    justify-items: center;
+    gap: 5%;
+    margin-bottom: 5%;
+}
+
+.primerParrafo {
+    text-align: end;
+    align-items: center;
+    margin-right: 5rem;
+
+}
