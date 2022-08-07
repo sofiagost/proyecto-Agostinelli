@@ -79,16 +79,39 @@ header {
  
 }
 
-h3 {
-    width: 100%;
+/*h3 {
+    height: 25px;
+    width: 50%;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     background-color: rgb(223, 130, 143);
     color: rgb(255, 255, 255);
+    transition: width 4s, height 4s;
+
 }
 
+/*h3 :hover {
+    width: 70%;
+    height: 30px;
+    
+}*/
 
+h3 {
+    height: 25px;
+    width: 50%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    background-color: rgb(223, 130, 143);
+    color: rgb(255, 255, 255);
+    text-align:start;
+}
 
+h3:hover {
+    
+    width: 100%;
+    transition: width 1s;
+    
+}
 
 
 .footer {
@@ -257,3 +280,32 @@ h3 {
     margin-right: 5rem;
 
 }
+
+body {
+    background-image: linear-gradient(to left bottom, #cd7fac, #c684bd, #bb8bcd, #ab93dc, #979be8);
+}
+
+.primeraImagen {
+    height: 200px;
+    width: 200px;
+    
+}
+
+.primeraImagen :hover {
+    height: 300px;
+    width: 300px;
+    transition: all 2s;
+}
+
+input {
+    height: 20px;
+    width: 200px;
+ 
+}
+
+input:focus {
+    height: 30px;
+    width: 210px;
+    transition: all 0.5s;
+}
+
