@@ -13,13 +13,36 @@ p {
     word-spacing: 0px;
 }
 
+
 h1 {
     font-family: 'Poppins', sans-serif;
-    font-weight: bolder;
-    text-align: center;
-    font-size: 50px;
-    color:rgb(143, 173, 229);
-    
+    justify-content: center;
+    align-self: center;
+    color: rgba(255, 255, 255, .1);
+    background: linear-gradient(to right,
+            rgb(79, 101, 226),
+            rgb(177, 106, 224),
+            rgb(201, 63, 148),
+            rgb(204, 86, 159),
+            rgb(223, 130, 143),
+            rgb(122, 104, 221));
+    background-size: 400%;
+    /*https://developer.mozilla.org/es/docs/Glossary/WebKit#referencia_t%C3%A9cnica*/
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 6em;
+    animation: naga 20s linear infinite;
+}
+
+@keyframes naga {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
 }
 
 h2 {
@@ -30,16 +53,13 @@ h2 {
     color: rgb(255, 255, 255);
 }
 
-.primerParrafo {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-}
 
 body{
     background-image: linear-gradient(to bottom, #eea7d0, #e6a7d3, #dda6d6, #d4a6d8, #cba6d9, #c3a5db, #bba5dc, #b2a4dd, #a7a3df, #9aa2e1, #8da2e2, #7da1e3);
     min-height: 100vh;
     
 }
+
 
 
 .banner {        
@@ -78,43 +98,72 @@ header {
     text-decoration: none;
 }
 
-.classMain {
-    display: flex;
-    
+
+
+.conteinerGrid {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "video"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }
 
-/*.contenedorImagenes {
-    display: flex;
-    flex-direction: row;
- 
-}*/
+.mainIndex {
+    margin-left: 10rem;
+}
 
-/*h3 {
-    height: 25px;
-    width: 50%;
+.MainUno  {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "primeraImagen primerParrafo";
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.MainDos {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "primeraImagen primerParrafo";
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+ .primerParrafo {
+    margin-left: 1rem;
+    width: 80%;
+ }
+
+.segundoTitulo {
+    margin-bottom: 2rem;
+}
+
+.primerTitulo {
+    margin-bottom: 2rem;
+}
+
+.primerParrafo {
     font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    background-color: rgb(223, 130, 143);
-    color: rgb(255, 255, 255);
-    transition: width 4s, height 4s;
-
+    font-weight:normal;
+    font-size:medium;
 }
 
-/*h3 :hover {
-    width: 70%;
-    height: 30px;
-    
-}*/
 
 h3 {
     height: 25px;
-    width: 30%;
+    width: 40%;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+    font-size: large;
     background-color: #F098ED;
-    
     color: rgb(255, 255, 255);
     text-align:start;
+    
 }
 
 h3:hover {
@@ -125,11 +174,25 @@ h3:hover {
     
 }
 
+.TituloTutorial {
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+}
+
+.tutorial {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    justify-content: center;
+    align-items: center;
+    
+}
 
 .footer {
     color: aliceblue;
     background-color: rgb(223, 130, 143);
     width: 100%;
+    height: 1.5rem;
     position: fixed;
     bottom: 0%;
     display: flex;
@@ -138,17 +201,15 @@ h3:hover {
     gap: 20px;
 }
 
-.footer__link{
-    color: aliceblue;
-    
-    
-    
-}
+
+
 .productos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
     justify-content: center;
+    
+    
     
 }
 .classProd {
@@ -158,6 +219,7 @@ h3:hover {
     width: 20rem;
     justify-content: center;
     align-items: center;
+    justify-self: center;
    
 }
 
@@ -183,20 +245,46 @@ h3:hover {
 
 .buscador__provincia {
     flex-direction: row;
+    margin-bottom: 0.5rem;
     
 }
 
-.boton{
+.buscador__localidad {
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    
+}
+
+.boton {
     width: 20%;
-    display: flex;
     justify-content: center;
     align-items: center;
-    }
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+}
+
+.boton:focus {
+    border-color: rgb(223, 130, 143);
+    transition: all 0.5s;
+
+}    
 
 .mapa {
     display: flex;
     justify-content: center;
     margin-bottom: 3%;
+}
+
+.gridLocales {
+    display: grid;
+    grid-template-areas: 
+    "banner"
+    "contenedorBusqueda"
+    "mapa"
+    "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
 }
 
 .formulario {
@@ -205,10 +293,7 @@ h3:hover {
     justify-content: center;
     align-items: center;
     height: 60vh;
-    
-    
-    
-    
+
 }
 
 .formularioCampos {
@@ -224,9 +309,6 @@ h3:hover {
     
 }
 
- /*Hola Gabi, acá no puedo hacer que el contenedor
- se centre. Estoy haciendo lo mismo que hice por
- ejemplo con el de locales, pero no me sale.*/
 
 .formulario__contenido{
     display: flex;
@@ -237,29 +319,6 @@ h3:hover {
     margin-left: 500px
 }
 
-contenedorVideo {
-    width: 100%;
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
- 
-}
-
-tutorial {
-    margin-bottom: 2%;
-    margin-top: 2%;
-}
-
-productos {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10%;
-    margin-bottom: 5%;
-   justify-content: center;
-    
-}
 
 .fotoProducto {
     justify-content: center;
@@ -275,65 +334,11 @@ productos {
     font-weight: bold;
 }
 
-/****/
-
-
-
-/*grilla {
-    display: grid;
-    grid-template-areas: 
-    "banner banner banner banner"
-    "primeraImagen primerParrafo"
-    "segundaImagen primerParrafo"
-    "contenedorVideo contendedorVideo"
-    "footer footer footer footer";
-    grid-template-columns: 1fr;
-    /*grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr; 
-    Hola Gabi acá te dejo comentado lo que hice inciialmente pero no funciona. El header lo agranda un montón y no se por qué. No considera filas a los elementos que pongo en cada una y tuve que poner una sola columna cuando a mi entender son dos porque no quedaba bien
-    grid-template-rows: auto;
-}
-*/
-
-/*Gabi acá aplique grilla a las imagenes y texto y pude. Pero no puedo con todo el body*/
-
-/*.grid {
-    display: grid;
-    grid-template-areas: 
-    "primerContenedor primerTexto"
-    "segundoContenedor segundoTexto";
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 200px 200px;
-    justify-items: center;
-    gap: 5%;
-    margin-bottom: 5%;
-}*/
-
-primerParrafo {
-    text-align: end;
-    align-items: center;
-    margin-right: 5rem;
-
-}
-
-body {
-    background-image: linear-gradient(to left bottom, #cd7fac, #c684bd, #bb8bcd, #ab93dc, #979be8);
-}
-
-primeraImagen {
-    height: 200px;
-    width: 200px;
-    
-}
-
-primeraImagen :hover {
-    height: 300px;
-    width: 300px;
-    transition: all 2s;
-}
 
 input {
     height: 20px;
     width: 200px;
+    
  
 }
 
@@ -342,4 +347,6 @@ input:focus {
     width: 210px;
     transition: all 0.5s;
 }
+
+/********/
 
