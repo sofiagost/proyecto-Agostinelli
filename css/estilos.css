@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 p {
@@ -17,7 +18,8 @@ h1 {
     font-weight: bolder;
     text-align: center;
     font-size: 50px;
-    color:rgb(223, 130, 143);
+    color:rgb(143, 173, 229);
+    
 }
 
 h2 {
@@ -34,50 +36,58 @@ h2 {
 }
 
 body{
-    background-color: rgb(252, 217, 240);
+    background-image: linear-gradient(to bottom, #eea7d0, #e6a7d3, #dda6d6, #d4a6d8, #cba6d9, #c3a5db, #bba5dc, #b2a4dd, #a7a3df, #9aa2e1, #8da2e2, #7da1e3);
+    min-height: 100vh;
+    
 }
 
 
 .banner {        
-    
+    display: flex;
+    flex-direction: column;
     height: 70%;
-    position: sticky;   
+      
     width:100%;
     top:0px;
     
-    background-color:rgb(143, 173, 229);
 }
 
-
-
-
 header {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;    
     margin-bottom: 10px;
-    padding: 10px;   
-    width: 100%;
-    position: sticky;
+    padding: 10px;
+    width: 70rem;
     font-family: 'Roboto', sans-serif;
     font-weight: normal; 
-    background-color:rgb(223, 130, 143);
+    background-color: rgb(143, 173, 229);
 }
 
 .navbar {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap: 15%;
+    gap: 50%;
+    
+
 }
 
 .navbar__boton {
     color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
-.contenedorImagenes {
+.classMain {
+    display: flex;
+    
+}
+
+/*.contenedorImagenes {
     display: flex;
     flex-direction: row;
  
-}
+}*/
 
 /*h3 {
     height: 25px;
@@ -98,10 +108,11 @@ header {
 
 h3 {
     height: 25px;
-    width: 50%;
+    width: 30%;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    background-color: rgb(223, 130, 143);
+    background-color: #F098ED;
+    
     color: rgb(255, 255, 255);
     text-align:start;
 }
@@ -109,7 +120,8 @@ h3 {
 h3:hover {
     
     width: 100%;
-    transition: width 1s;
+    transition: width 3s;
+    background-image: linear-gradient(to right, #f098ed, #d898f0, #c098f0, #a798ed, #8e97e8);
     
 }
 
@@ -131,6 +143,22 @@ h3:hover {
     
     
     
+}
+.productos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.classProd {
+    display: flex;
+    flex-direction: column;
+    height: 20rem;
+    width: 20rem;
+    justify-content: center;
+    align-items: center;
+   
 }
 
 .contenedorBusqueda {
@@ -176,7 +204,10 @@ h3:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3%;
+    height: 60vh;
+    
+    
+    
     
 }
 
@@ -188,6 +219,8 @@ h3:hover {
     justify-content: center;
     align-items: center;
     background-color: rgb(143, 173, 229);
+    position: relative;
+    top: 20px;
     
 }
 
@@ -204,7 +237,7 @@ h3:hover {
     margin-left: 500px
 }
 
-.contenedorVideo {
+contenedorVideo {
     width: 100%;
     display: flex; 
     flex-direction: row;
@@ -213,12 +246,12 @@ h3:hover {
  
 }
 
-.tutorial {
+tutorial {
     margin-bottom: 2%;
     margin-top: 2%;
 }
 
-.productos {
+productos {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -246,7 +279,7 @@ h3:hover {
 
 
 
-.grilla {
+/*grilla {
     display: grid;
     grid-template-areas: 
     "banner banner banner banner"
@@ -256,13 +289,14 @@ h3:hover {
     "footer footer footer footer";
     grid-template-columns: 1fr;
     /*grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr; 
-    Hola Gabi acá te dejo comentado lo que hice inciialmente pero no funciona. El header lo agranda un montón y no se por qué. No considera filas a los elementos que pongo en cada una y tuve que poner una sola columna cuando a mi entender son dos porque no quedaba bien*/
+    Hola Gabi acá te dejo comentado lo que hice inciialmente pero no funciona. El header lo agranda un montón y no se por qué. No considera filas a los elementos que pongo en cada una y tuve que poner una sola columna cuando a mi entender son dos porque no quedaba bien
     grid-template-rows: auto;
 }
+*/
 
 /*Gabi acá aplique grilla a las imagenes y texto y pude. Pero no puedo con todo el body*/
 
-.grid {
+/*.grid {
     display: grid;
     grid-template-areas: 
     "primerContenedor primerTexto"
@@ -272,9 +306,9 @@ h3:hover {
     justify-items: center;
     gap: 5%;
     margin-bottom: 5%;
-}
+}*/
 
-.primerParrafo {
+primerParrafo {
     text-align: end;
     align-items: center;
     margin-right: 5rem;
@@ -285,13 +319,13 @@ body {
     background-image: linear-gradient(to left bottom, #cd7fac, #c684bd, #bb8bcd, #ab93dc, #979be8);
 }
 
-.primeraImagen {
+primeraImagen {
     height: 200px;
     width: 200px;
     
 }
 
-.primeraImagen :hover {
+primeraImagen :hover {
     height: 300px;
     width: 300px;
     transition: all 2s;
