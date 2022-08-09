@@ -66,7 +66,6 @@ body{
     display: flex;
     flex-direction: column;
     height: 70%;
-      
     width:100%;
     top:0px;
     
@@ -83,6 +82,7 @@ header {
     font-family: 'Roboto', sans-serif;
     font-weight: normal; 
     background-color: rgb(143, 173, 229);
+    border-radius: 10px;
 }
 
 .navbar {
@@ -96,8 +96,14 @@ header {
 .navbar__boton {
     color: rgb(255, 255, 255);
     text-decoration: none;
+    font-weight: normal;
 }
 
+.navbar__boton:hover {
+    font-weight: bold;
+    color: rgb(236, 201, 206);
+    transition: all 0s;
+ }
 
 
 .conteinerGrid {
@@ -111,8 +117,19 @@ header {
     grid-template-rows: auto;
 }
 
+body {
+    min-height: 100vh;
+}
+
+
 .mainIndex {
+    
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
     margin-left: 10rem;
+    
+
 }
 
 .MainUno  {
@@ -122,6 +139,7 @@ header {
     grid-template-areas: "primeraImagen primerParrafo";
     justify-content: center;
     align-items: center;
+    justify-self: center;
     margin-bottom: 3rem;
 }
 
@@ -132,6 +150,8 @@ header {
     grid-template-areas: "primeraImagen primerParrafo";
     justify-content: center;
     align-items: center;
+    justify-self: center;
+    
     margin-bottom: 3rem;
 }
  .primerParrafo {
@@ -141,6 +161,7 @@ header {
 
 .segundoTitulo {
     margin-bottom: 2rem;
+    
 }
 
 .primerTitulo {
@@ -162,7 +183,8 @@ h3 {
     font-size: large;
     background-color: #F098ED;
     color: rgb(255, 255, 255);
-    text-align:start;
+    border-radius: 5px;
+    
     
 }
 
@@ -225,10 +247,11 @@ h3:hover {
 
 .contenedorBusqueda {
     width: 100%;
+    margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3%;
+    
 }
 
 .buscador {
@@ -273,7 +296,8 @@ h3:hover {
 .mapa {
     display: flex;
     justify-content: center;
-    margin-bottom: 3%;
+    margin-bottom: 3rem;
+    
 }
 
 .gridLocales {
@@ -349,4 +373,14 @@ input:focus {
 }
 
 /********/
+
+.gridComunidad {
+    display: grid;
+    grid-template-areas: 
+    "h3"
+    "img"
+    "p";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
 
