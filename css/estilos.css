@@ -57,7 +57,7 @@ h2 {
 body{
     background-image: linear-gradient(to bottom, #eea7d0, #e6a7d3, #dda6d6, #d4a6d8, #cba6d9, #c3a5db, #bba5dc, #b2a4dd, #a7a3df, #9aa2e1, #8da2e2, #7da1e3);
     min-height: 100vh;
-    
+        
 }
 
 
@@ -433,6 +433,7 @@ font-family: 'Poppins', sans-serif;
     justify-content: center;
     align-items: center;
     align-self: center;
+    
 }
 
 .subtitulo2 {
@@ -458,4 +459,42 @@ font-family: 'Poppins', sans-serif;
     font-weight:normal;
     font-size:medium;
     margin-top: 1rem;
+    margin-bottom: 2rem;
+    /* Hola Brian, acá es dónde si no pongo un margen 
+    inferior la pantalla se corta sola y no va 
+    siguiendo al contenido como si en index*/
+}
+
+.boton2 {
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+}
+
+
+.input2 {
+    height: 60px;
+    width: 600px;
+    
+ 
+}
+
+.input2:focus {
+    height: 65px;
+    width: 610px;
+    transition: all 0.5s;
+}
+
+.buscador2 {
+    width: 65%;
+    border-style: outset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(143, 173, 229);
+    
 }
