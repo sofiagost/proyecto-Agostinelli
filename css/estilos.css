@@ -109,13 +109,30 @@ header {
 .conteinerGrid {
     display: grid;
     grid-template-areas: 
-    "header"
-    "main"
+    "banner"
+    "mainIndex"
     "video"
     "footer";
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 }
+
+.banner {
+    grid-area: banner;
+}
+
+.mainIndex {
+    grid-area: mainIndex;
+}
+
+.video {
+    grid-area: video;
+}
+
+.footer {
+    grid-area: footer;
+}
+
 
 body {
     min-height: 100vh;
@@ -141,6 +158,14 @@ body {
     align-items: center;
     justify-self: center;
     margin-bottom: 3rem;
+}
+
+.primeraImagen {
+    grid-area: primeraImagen;
+}
+
+.primerParrafo {
+    grid-area: primerParrafo;
 }
 
 .MainDos {
@@ -227,13 +252,15 @@ h3:hover {
 
 .productos {
     display: grid;
+    grid-template-areas: 
+    "prod1 prod2 prod3"
+    "prod4 prod5 prod6";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     justify-content: center;
     
-    
-    
 }
+
 .classProd {
     display: flex;
     flex-direction: column;
@@ -243,6 +270,30 @@ h3:hover {
     align-items: center;
     justify-self: center;
    
+}
+
+.prod1 {
+    grid-area: prod1;
+}
+
+.prod2 {
+    grid-area: prod2;
+}
+
+.prod3 {
+    grid-area: prod3;
+}
+
+.prod4 {
+    grid-area: prod4;
+}
+
+.prod5 {
+    grid-area: prod5;
+}
+
+.prod6 {
+    grid-area: prod6;
 }
 
 .contenedorBusqueda {
@@ -372,19 +423,6 @@ input:focus {
     transition: all 0.5s;
 }
 
-/********/
-
-.gridComunidad {
-    display: grid;
-    grid-template-areas: 
-    "h3"
-    "img"
-    "p";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-}
-
-/*****/
 
 
 .banner2 {        
@@ -498,3 +536,4 @@ font-family: 'Poppins', sans-serif;
     background-color: rgb(143, 173, 229);
     
 }
+
