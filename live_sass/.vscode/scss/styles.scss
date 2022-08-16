@@ -1,11 +1,183 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
-
-*{
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    }
+
+@import "variables.scss";
+
+.conteinerGrid {
+    display: grid;
+    grid-template-areas: 
+        "banner"
+        "mainIndex"
+        "video"
+        "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        
+    .banner {
+        grid-area: banner;
+
+      header {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-self: center;    
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 70rem;
+            font-family: $tipografia-general;
+            font-weight: normal; 
+            background-color: $color-secundario;
+            border-radius: 10px;
+          
     
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 50%;
+    
+    
+    
+        .navbar__boton {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-weight: normal;
+            &:hover {font-weight: bold;
+                color: rgb(236, 201, 206);
+                transition: all 0s;}
+                }
+            }
+        }
+    }
 }
+
+.banner {
+    grid-area: banner;
+}
+
+.mainIndex {
+    grid-area: mainIndex;
+}
+
+.video {
+    grid-area: video;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+body {
+    min-height: 100vh;
+}
+
+.mainIndex {
+    
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    margin-left: 10rem;
+
+    .primerTitulo {
+        margin-bottom: 2rem;
+      
+
+    .MainUno  {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "primeraImagen primerParrafo";
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        margin-bottom: 3rem;
+
+
+    .primeraImagen {
+        grid-area: primeraImagen;
+
+
+     .primerParrafo {
+        grid-area: primerParrafo;
+
+    .segundoTitulo {
+        margin-bottom: 2rem;
+            
+    .MainDos {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "primeraImagen primerParrafo";
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        margin-bottom: 3rem;
+
+    .primerParrafo {
+        margin-left: 1rem;
+        width: 80%;
+        font-family: $tipografia-general;
+        font-weight:normal;
+        font-size:medium;
+
+    h3 {
+    height: 25px;
+    width: 40%;
+    font-family: $tipografia-general;
+    font-weight: bold;
+    font-size: large;
+    background-color: $color-primario;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    &:hover {
+        width: 100%;
+        transition: width 3s;
+        background-image: linear-gradient(to right, #f098ed, #d898f0, #c098f0, #a798ed, #8e97e8);} 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    
+.video {
+    grid-area: video;
+
+
+    .TituloTutorial {
+        margin-bottom: 2rem;
+        margin-left: 10rem;
+
+
+        .tutorial {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3rem;
+            justify-content: center;
+            align-items: center;}
+        }
+    }
+
+.footer {
+    background-color: $color-primario;
+    color: aliceblue;
+    width: 100%;
+    height: 1.5rem;
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
 
 p {
     line-height: 18px;
@@ -59,194 +231,6 @@ body{
     min-height: 100vh;
         
 }
-
-
-
-.banner {        
-    display: flex;
-    flex-direction: column;
-    height: 70%;
-    width:100%;
-    top:0px;
-    
-}
-
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-self: center;    
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 70rem;
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal; 
-    background-color: rgb(143, 173, 229);
-    border-radius: 10px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: center;
-    gap: 50%;
-
-}
-
-.navbar__boton {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: normal;
-}
-
-.navbar__boton:hover {
-    font-weight: bold;
-    color: rgb(236, 201, 206);
-    transition: all 0s;
- }
-
-
-.conteinerGrid {
-    display: grid;
-    grid-template-areas: 
-    "banner"
-    "mainIndex"
-    "video"
-    "footer";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-}
-
-.banner {
-    grid-area: banner;
-}
-
-.mainIndex {
-    grid-area: mainIndex;
-}
-
-.video {
-    grid-area: video;
-}
-
-.footer {
-    grid-area: footer;
-}
-
-
-body {
-    min-height: 100vh;
-}
-
-
-.mainIndex {
-    
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    margin-left: 10rem;
-    
-
-}
-
-.MainUno  {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    grid-template-areas: "primeraImagen primerParrafo";
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    margin-bottom: 3rem;
-}
-
-.primeraImagen {
-    grid-area: primeraImagen;
-}
-
-.primerParrafo {
-    grid-area: primerParrafo;
-}
-
-.MainDos {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    grid-template-areas: "primeraImagen primerParrafo";
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    
-    margin-bottom: 3rem;
-}
- .primerParrafo {
-    margin-left: 1rem;
-    width: 80%;
- }
-
-.segundoTitulo {
-    margin-bottom: 2rem;
-    
-}
-
-.primerTitulo {
-    margin-bottom: 2rem;
-}
-
-.primerParrafo {
-    font-family: 'Roboto', sans-serif;
-    font-weight:normal;
-    font-size:medium;
-}
-
-
-h3 {
-    height: 25px;
-    width: 40%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
-    font-size: large;
-    background-color: #F098ED;
-    color: rgb(255, 255, 255);
-    border-radius: 5px;
-    
-    
-}
-
-h3:hover {
-    
-    width: 100%;
-    transition: width 3s;
-    background-image: linear-gradient(to right, #f098ed, #d898f0, #c098f0, #a798ed, #8e97e8);
-    
-}
-
-.TituloTutorial {
-    margin-bottom: 2rem;
-    margin-left: 10rem;
-}
-
-.tutorial {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3rem;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.footer {
-    color: aliceblue;
-    background-color: rgb(223, 130, 143);
-    width: 100%;
-    height: 1.5rem;
-    position: fixed;
-    bottom: 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
 
 
 .productos {
@@ -535,4 +519,7 @@ font-family: 'Poppins', sans-serif;
     background-color: rgb(143, 173, 229);
     
 }
+    
 
+    
+    

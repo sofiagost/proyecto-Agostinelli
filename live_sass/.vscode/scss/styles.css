@@ -1,0 +1,448 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.conteinerGrid {
+  display: grid;
+  grid-template-areas: "banner" "mainIndex" "video" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+.conteinerGrid .banner {
+  grid-area: banner;
+}
+.conteinerGrid .banner header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 70rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  background-color: rgb(143, 173, 229);
+  border-radius: 10px;
+}
+.conteinerGrid .banner header .navbar {
+  display: flex;
+  justify-content: center;
+  gap: 50%;
+}
+.conteinerGrid .banner header .navbar .navbar__boton {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: normal;
+}
+.conteinerGrid .banner header .navbar .navbar__boton:hover {
+  font-weight: bold;
+  color: rgb(236, 201, 206);
+  transition: all 0s;
+}
+
+.banner {
+  grid-area: banner;
+}
+
+.mainIndex {
+  grid-area: mainIndex;
+}
+
+.video {
+  grid-area: video;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+body {
+  min-height: 100vh;
+}
+
+.mainIndex {
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  margin-left: 10rem;
+}
+.mainIndex .primerTitulo {
+  margin-bottom: 2rem;
+}
+.mainIndex .primerTitulo .MainUno {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "primeraImagen primerParrafo";
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  margin-bottom: 3rem;
+}
+.mainIndex .primerTitulo .MainUno .primeraImagen {
+  grid-area: primeraImagen;
+}
+.mainIndex .primerTitulo .MainUno .primeraImagen .primerParrafo {
+  grid-area: primerParrafo;
+}
+.mainIndex .primerTitulo .MainUno .primeraImagen .primerParrafo .segundoTitulo {
+  margin-bottom: 2rem;
+}
+.mainIndex .primerTitulo .MainUno .primeraImagen .primerParrafo .segundoTitulo .MainDos {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  grid-template-areas: "primeraImagen primerParrafo";
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  margin-bottom: 3rem;
+}
+.mainIndex .primerTitulo .MainUno .primeraImagen .primerParrafo .segundoTitulo .MainDos .primerParrafo {
+  margin-left: 1rem;
+  width: 80%;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: medium;
+}
+.mainIndex .primerTitulo .MainUno .primeraImagen .primerParrafo .segundoTitulo .MainDos .primerParrafo h3 {
+  height: 25px;
+  width: 40%;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: large;
+  background-color: rgb(223, 130, 143);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+.mainIndex .primerTitulo .MainUno .primeraImagen .primerParrafo .segundoTitulo .MainDos .primerParrafo h3:hover {
+  width: 100%;
+  transition: width 3s;
+  background-image: linear-gradient(to right, #f098ed, #d898f0, #c098f0, #a798ed, #8e97e8);
+}
+
+.video {
+  grid-area: video;
+}
+.video .TituloTutorial {
+  margin-bottom: 2rem;
+  margin-left: 10rem;
+}
+.video .TituloTutorial .tutorial {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  background-color: rgb(223, 130, 143);
+  color: aliceblue;
+  width: 100%;
+  height: 1.5rem;
+  position: fixed;
+  bottom: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+p {
+  line-height: 18px;
+  letter-spacing: 3px;
+  word-spacing: 0px;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  align-self: center;
+  color: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to right, rgb(79, 101, 226), rgb(177, 106, 224), rgb(201, 63, 148), rgb(204, 86, 159), rgb(223, 130, 143), rgb(122, 104, 221));
+  background-size: 400%;
+  /*https://developer.mozilla.org/es/docs/Glossary/WebKit#referencia_t%C3%A9cnica*/
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 6em;
+  -webkit-animation: naga 20s linear infinite;
+          animation: naga 20s linear infinite;
+}
+
+@-webkit-keyframes naga {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+@keyframes naga {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  font-style: italic;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  background-image: linear-gradient(to bottom, #eea7d0, #e6a7d3, #dda6d6, #d4a6d8, #cba6d9, #c3a5db, #bba5dc, #b2a4dd, #a7a3df, #9aa2e1, #8da2e2, #7da1e3);
+  min-height: 100vh;
+}
+
+.productos {
+  display: grid;
+  grid-template-areas: "prod1 prod2 prod3" "prod4 prod5 prod6";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+}
+
+.classProd {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 20rem;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+}
+
+.prod1 {
+  grid-area: prod1;
+}
+
+.prod2 {
+  grid-area: prod2;
+}
+
+.prod3 {
+  grid-area: prod3;
+}
+
+.prod4 {
+  grid-area: prod4;
+}
+
+.prod5 {
+  grid-area: prod5;
+}
+
+.prod6 {
+  grid-area: prod6;
+}
+
+.contenedorBusqueda {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buscador {
+  width: 30%;
+  border-style: outset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(143, 173, 229);
+}
+
+.buscador__provincia {
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.buscador__localidad {
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.boton {
+  width: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.boton:focus {
+  border-color: rgb(223, 130, 143);
+  transition: all 0.5s;
+}
+
+.mapa {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.gridLocales {
+  display: grid;
+  grid-template-areas: "banner" "contenedorBusqueda" "mapa" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+}
+
+.formulario {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+.formularioCampos {
+  width: 50%;
+  border-style: outset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(143, 173, 229);
+  position: relative;
+  top: 20px;
+}
+
+.formulario__contenido {
+  display: flex;
+}
+
+.fotoLipstick {
+  margin-left: 500px;
+}
+
+.fotoProducto {
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.labelProducto {
+  text-align: center;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+
+input {
+  height: 20px;
+  width: 200px;
+}
+
+input:focus {
+  height: 30px;
+  width: 210px;
+  transition: all 0.5s;
+}
+
+.banner2 {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  width: 100%;
+  top: 0px;
+}
+
+.navbar2 {
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+}
+
+.titulo2 {
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  align-self: center;
+  color: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(to right, rgb(79, 101, 226), rgb(177, 106, 224), rgb(201, 63, 148), rgb(204, 86, 159), rgb(223, 130, 143), rgb(122, 104, 221));
+  background-size: 400%;
+  /*https://developer.mozilla.org/es/docs/Glossary/WebKit#referencia_t%C3%A9cnica*/
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 6em;
+  -webkit-animation: naga 20s linear infinite;
+          animation: naga 20s linear infinite;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.subtitulo2 {
+  display: flex;
+  height: 25px;
+  width: 40%;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: large;
+  background-color: #F098ED;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  align-items: start;
+  justify-self: left;
+  justify-content: left;
+}
+
+.descripcion {
+  line-height: 18px;
+  letter-spacing: 3px;
+  word-spacing: 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: medium;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  /* Hola Brian, acá es dónde si no pongo un margen 
+  inferior la pantalla se corta sola y no va 
+  siguiendo al contenido como si en index*/
+}
+
+.boton2 {
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.input2 {
+  height: 60px;
+  width: 600px;
+}
+
+.input2:focus {
+  height: 65px;
+  width: 610px;
+  transition: all 0.5s;
+}
+
+.buscador2 {
+  width: 65%;
+  border-style: outset;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(143, 173, 229);
+}/*# sourceMappingURL=styles.css.map */
